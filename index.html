@@ -28,13 +28,33 @@
   <link href="css/style.css" rel="stylesheet" />
   <!-- responsive style -->
   <link href="css/responsive.css" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <style>
+    .what {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      z-index: 999; /* Ensure the overlay appears above other content */
+    }
+  
+    
+  
+    .overlay-active .what {
+      display: block; /* Show the overlay when the overlay-active class is present */
+    }
+  </style>
 </head>
 
 <body>
+  <div class="what overlay-active">
+    <a href="	https://wa.me/923317888806">
+      <img src="whatsappimage.png" width="50" alt="">
+    </a>
+  </div>
   <div class="hero_area">
+    
     <!-- header section strats -->
     <header class="header_section ">
+      
       <div class="container">
         <nav class="navbar navbar-expand-lg custom_nav-container">
           <a class="navbar-brand" href="index.html">
@@ -59,7 +79,6 @@
               <li class="nav-item">
                 <a class="nav-link" href="blog.html">Blog</a>
               </li>
-            
             </ul>
             <div class="user_option ">
               <a href="" class="">
@@ -166,7 +185,19 @@
     </section>
     <!-- end slider section -->
   </div>
-
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+  var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+  (function(){
+  var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+  s1.async=true;
+  s1.src='https://embed.tawk.to/65ae11a48d261e1b5f56424c/1hknv9qvt';
+  s1.charset='UTF-8';
+  s1.setAttribute('crossorigin','*');
+  s0.parentNode.insertBefore(s1,s0);
+  })();
+  </script>
+  <!--End of Tawk.to Script-->
   <!-- book section -->
 
   <section class="book_section ">
@@ -565,15 +596,6 @@ Auto Call in case of Unusual Activity.
                   Email : alraheemtechnologies@gmail.com
                 </span>
               </a>
-              <!-- <li class="nav-item">
-                <a class="nav-link" href="#" target="_blank">
-                  </a>
-              </li> -->
-            
-              <a href="https://wa.me/03317888806" target="_blank">
-                <i class="fab fa-whatsapp"></i>
-                <span>Contact us on Whatsapp</span>
-            </a>            
             </div>
           </div>
           <div class="col-md-4">
