@@ -2,7 +2,6 @@ body {
   font-family: "Poppins", sans-serif;
   color: #040000;
   background-color: #ffffff;
-  overflow: hidden;
 }
 
 .layout_padding {
@@ -53,7 +52,7 @@ body {
 
 /*header section*/
 .hero_area {
-  min-height: 15vh;
+  min-height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -69,7 +68,7 @@ body {
 }
 
 .header_section {
-  padding: 0px 0;
+  padding: 15px 0;
 }
 
 .navbar-nav {
@@ -79,7 +78,7 @@ body {
 .navbar-nav .nav-item .nav-link {
   padding: 10px 20px;
   text-align: center;
-  color: midnightblue;
+  color: #ffffff;
   position: relative;
   text-transform: uppercase;
 }
@@ -166,7 +165,7 @@ a:focus {
 }
 
 .navbar-brand span {
-  color: midnightblue;
+  color: #ffffff;
   text-transform: uppercase;
   font-size: 24px;
   margin: 0;
@@ -716,21 +715,7 @@ a:focus {
   background-color: transparent;
   color: #ff7070;
 }
-.social-media {
-  display: flex;
-  justify-content: space-between;
-  width: 100px;
-}
 
-.social-media a {
-  color: #000;
-  font-size: 24px;
-  text-decoration: none;
-}
-
-.social-media a:hover {
-  color: #333;
-}
 /* footer section*/
 .footer_section {
   position: relative;
