@@ -36,19 +36,9 @@
       z-index: 999; /* Ensure the overlay appears above other content */
     }
   
-    .what::before {
-      content: '';
-      position: fixed;
-      top: 0;
-      left: 0;
-      /* width: 100%;
-      height: 10%; */
-      background-color: rgba(29, 12, 12, 0.5); /* Adjust the alpha value for transparency */
-      z-index: -1; /* Place the overlay behind the .what element */
-      display: none; /* Initially hidden */
-    }
+    
   
-    .overlay-active .what::before {
+    .overlay-active .what {
       display: block; /* Show the overlay when the overlay-active class is present */
     }
   </style>
