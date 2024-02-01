@@ -204,7 +204,7 @@
     <div class="container">
       <div class="col-md-11 col=lg-9 mx-auto px-0">
         <div class="book_form ">
-          <form action="https://script.google.com/macros/s/AKfycbzxIUspPTj4RFj7SpEZ_zaFwlFC2bnDH8zZRhdRINBCDTlyeAn8qdkxw07edqMb8S9Ufg/exec" method ="post">
+          <form action="https://script.google.com/macros/s/AKfycbwjfIubWIBuLmUz8_mUFqLx9gBdFnf3D-torhc8kfSjfqB0MVAEUEB14cGC957Yq292/exec" method ="post">
             <div class="form-row">
               <div class="form-group col-md-6">
                 <div class="input-group ">
@@ -603,7 +603,7 @@ Auto Call in case of Unusual Activity.
               <h4>
                 SIGN UP TO OUR NEWSLETTER
               </h4>
-              <form action="https://script.google.com/macros/s/AKfycbzxIUspPTj4RFj7SpEZ_zaFwlFC2bnDH8zZRhdRINBCDTlyeAn8qdkxw07edqMb8S9Ufg/exec">
+              <form action="https://script.google.com/macros/s/AKfycbwjfIubWIBuLmUz8_mUFqLx9gBdFnf3D-torhc8kfSjfqB0MVAEUEB14cGC957Yq292/exec">
                 <input type="text" placeholder="Enter Your Email" />
                 <button type="submit">
                   Subscribe
@@ -634,10 +634,10 @@ Auto Call in case of Unusual Activity.
   <script src="js/bootstrap.js"></script>
   <script src="js/custom.js"></script>
   <script>
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbzxIUspPTj4RFj7SpEZ_zaFwlFC2bnDH8zZRhdRINBCDTlyeAn8qdkxw07edqMb8S9Ufg/exec'
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbwjfIubWIBuLmUz8_mUFqLx9gBdFnf3D-torhc8kfSjfqB0MVAEUEB14cGC957Yq292/exec'
     const form = document.forms['formName']
     
-    form.addEventListener('submit', e => {
+    form.addEventListener('Book Now', e => {
       e.preventDefault()
       fetch(scriptURL, { method: 'POST', body: new FormData(form)})
       .then(response => alert("Thank you! your form is submitted successfully." ))
