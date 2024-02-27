@@ -41,6 +41,32 @@
     .overlay-active .what {
       display: block; /* Show the overlay when the overlay-active class is present */
     }
+    /* .pre-booked-button {
+  background-color: #4CAF50;  
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 12px;
+}
+.book-now-button {
+  background-color: #4CAF50; 
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 12px;
+} */
   </style>
 </head>
 
@@ -254,7 +280,11 @@
               </div>
             </div>
             <div class="btn-box">
-              <button type="submit" class="">Book Now</button>
+              <button class="book-now-button">Book Now</button>
+              <!-- <button type="submit" class="abc2" onclick="showForm()">Pre Booked</button> -->
+            </div>
+            <div class="btn-box">
+              <button class="pre-booked-button">Pre Booked </button>
             </div>
           </form>
         </div>
@@ -583,6 +613,12 @@ Auto Call in case of Unusual Activity.
             </p>
             <div class="contact_nav">
               <a href="">
+                <i class="fa fa-envelope" aria-hidden="true"></i>
+                <span>
+                  Email:alraheemtechnologies@gmail.com
+                </span>
+              </a>
+              <a href="">
                 <i class="fa fa-map-marker" aria-hidden="true"></i>
                 <span>
                   Location: Hatch 8, NSTP Nust, Islamabad
@@ -594,12 +630,7 @@ Auto Call in case of Unusual Activity.
                   Call : +92 331 788 8806
                 </span>
               </a>
-              <a href="">
-                <i class="fa fa-envelope" aria-hidden="true"></i>
-                <span>
-                  Email : alraheemtechnologies@gmail.com
-                </span>
-              </a>
+        
             </div>
           </div>
           <div class="col-md-4">
@@ -657,6 +688,12 @@ Auto Call in case of Unusual Activity.
       .catch(error => console.error('Error!', error.message))
     })
     </script>
+<script type="text/javascript">
+  function showForm() {
+    const form = document.getElementById('formElement');
+    form.style.display = 'block'; // Show the form
+  }
+</script>
 
 
 </body>
