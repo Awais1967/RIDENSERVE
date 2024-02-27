@@ -67,6 +67,52 @@
   cursor: pointer;
   border-radius: 12px;
 } */
+.pre-booked-form {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.pre-booked-form label {
+  margin-bottom: 5px;
+}
+
+.pre-booked-input {
+  height: 30px;
+  padding: 0 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.pre-booked-input[type="time"], .pre-booked-input[type="date"] {
+  height: 30px;
+  padding: 0 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #4CAF50;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #45a049;
+}
   </style>
 </head>
 
@@ -280,7 +326,8 @@
               <!-- <button type="submit" class="abc2" onclick="showForm()">Pre Booked</button> -->
             </div>
             <div class="btn-box">
-              <button class="pre-booked-button">Pre Booked </button>
+              <!-- <button class="book-now-button">Book Now</button> -->
+              <a href="prebookedform.html" target="_blank" class="book-now-button">Pre Booked</a>
             </div>
           </form>
         </div>
@@ -665,7 +712,7 @@ Auto Call in case of Unusual Activity.
   <script src="js/bootstrap.js"></script>
   <script src="js/custom.js"></script>
   <script>
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbwm7JzAmR7AcyDI9An-Epz09jLiy43e7UN5fc_Eas9rQKSx7MICKhWYFKmFH9Ug2Grv1A/exec'
+    //const scriptURL = 'https://script.google.com/macros/s/AKfycbwm7JzAmR7AcyDI9An-Epz09jLiy43e7UN5fc_Eas9rQKSx7MICKhWYFKmFH9Ug2Grv1A/exec'
     const form = document.forms['formName']
     
     form.addEventListener('submit', e => {
@@ -681,6 +728,64 @@ Auto Call in case of Unusual Activity.
     const form = document.getElementById('formElement');
     form.style.display = 'block'; // Show the form
   }
+</script>
+<script>
+   const preBookedButton = document.getElementById("preBookedButton");
+
+preBookedButton.onclick = function() {
+  const form = document.createElement("form");
+  form.classList.add("pre-booked-form");
+  form.setAttribute("action", "/prebook");
+  form.setAttribute("method", "post");
+  form.setAttribute("target", "_blank");
+
+  const nameInput = document.createElement("input");
+  nameInput.classList.add("pre-booked-input");
+  nameInput.setAttribute("type", "text");
+  nameInput.setAttribute("name", "name");
+  nameInput.setAttribute("required", "required");
+
+  const cnicInput = document.createElement("input");
+  cnicInput.classList.add("pre-booked-input");
+  cnicInput.setAttribute("type", "text");
+  cnicInput.setAttribute("name", "cnic");
+  cnicInput.setAttribute("required", "required");
+
+  const timeInput = document.createElement("input");
+  timeInput.classList.add("pre-booked-input");
+  timeInput.setAttribute("type", "time");
+  timeInput.setAttribute("name", "time");
+  timeInput.setAttribute("required", "required");
+
+  const dateInput = document.createElement("input");
+  dateInput.classList.add("pre-booked-input");
+  dateInput.setAttribute("type", "date");
+  dateInput.setAttribute("name", "date");
+  dateInput.setAttribute("required", "required");
+
+  const totalAmountInput = document.createElement("input");
+  totalAmountInput.classList.add("pre-booked-input");
+  totalAmountInput.setAttribute("type", "number");
+  totalAmountInput.setAttribute("name", "totalAmount");
+  totalAmountInput.setAttribute("required", "required");
+
+  const submitButton = document.createElement("input");
+  submitButton.classList.add("pre-booked-button");
+  submitButton.setAttribute("type", "submit");
+  submitButton.setAttribute("value", "Submit");
+
+  form.appendChild(nameInput);
+  form.appendChild(cnicInput);
+  form.appendChild(timeInput);
+  form.appendChild(dateInput);
+  form.appendChild(totalAmountInput);
+  form.appendChild(submitButton);
+
+  document.body.appendChild(form);
+  form.submit();
+  document.body.removeChild(form);
+
+}
 </script>
 
 
